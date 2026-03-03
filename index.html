@@ -1,1 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payphone Morelia</title>
 
+<style>
+:root{
+  --bg1:#0f1f4d;
+  --bg2:#1e4fff;
+  --panel:rgba(255,255,255,0.08);
+  --border:rgba(255,255,255,0.15);
+  --text:#ffffff;
+  --muted:rgba(255,255,255,0.75);
+  --green:#3CFF78;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto;
+}
+
+body{
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  color:var(--text);
+  padding:40px 20px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:50px;
+}
+
+.logo{
+  font-weight:700;
+  font-size:20px;
+}
+
+.btn{
+  background:#3b82f6;
+  padding:12px 20px;
+  border-radius:8px;
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#2563eb;
+}
+
+.hero{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:40px;
+  align-items:center;
+  margin-bottom:60px;
+}
+
+.hero h1{
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  color:var(--muted);
+  margin-bottom:25px;
+  line-height:1.6;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:15px;
+}
+
+.btn-outline{
+  border:2px solid white;
+  padding:12px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  color:white;
+}
+
+.panel{
+  background:var(--panel);
+  border:1px solid var(--border);
+  padding:25px;
+  border-radius:14px;
+  backdrop-filter:blur(8px);
+}
+
+.panel h3{
+  margin-bottom:15px;
+}
+
+.check{
+  color:var(--green);
+  margin-right:8px;
+}
+
+.section{
+  margin-bottom:50px;
+}
+
+details{
+  background:var(--panel);
+  border:1px solid var(--border);
+  padding:15px 20px;
+  border-radius:10px;
+  margin-bottom:12px;
+  cursor:pointer;
+}
+
+details summary{
+  font-weight:600;
+}
+
+details ul{
+  margin-top:10px;
+  padding-left:18px;
+  color:var(--muted);
+}
+
+@media(max-width:900px){
+  .hero{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="topbar">
+  <div class="logo">Payphone • Morelia</div>
+  <a class="btn" href="https://www.facebook.com/share/1isYCJbbrC/?mibextid=wwXIfr" target="_blank">Ir a Facebook</a>
+</div>
+
+<div class="hero">
+  <div>
+    <h1>Payphone llega a Morelia</h1>
+    <p>Financia tu celular con pagos semanales. Proceso rápido, atención directa y entrega inmediata.</p>
+    <div class="hero-buttons">
+      <a class="btn" href="https://www.facebook.com/share/1isYCJbbrC/?mibextid=wwXIfr" target="_blank">Ir a Facebook y cotizar</a>
+      <a class="btn-outline" href="#modelos">Ver modelos</a>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Lo que te damos</h3>
+    <p><span class="check">✔</span>Aprobación en minutos</p>
+    <p><span class="check">✔</span>Pagos semanales</p>
+    <p><span class="check">✔</span>Atención por Facebook</p>
+    <p><span class="check">✔</span>Entrega inmediata</p>
+  </div>
+</div>
+
+<div class="section" id="modelos">
+<h2 style="margin-bottom:20px;">Modelos disponibles</h2>
+
+<details>
+<summary>Infinix Hot 60 Pro</summary>
+<ul>
+<li>Pantalla 6.78" AMOLED</li>
+<li>Helio G200</li>
+<li>8GB RAM / 256GB</li>
+<li>Batería 5160 mAh</li>
+<li>Cámara 50 MP</li>
+</ul>
+</details>
+
+<details>
+<summary>Infinix Hot 60i</summary>
+<ul>
+<li>Pantalla 6.6" HD+</li>
+<li>Helio G81</li>
+<li>4-8GB RAM</li>
+<li>Batería 5000 mAh</li>
+<li>Cámara 50 MP</li>
+</ul>
+</details>
+
+<details>
+<summary>Infinix Hot 50 Pro</summary>
+<ul>
+<li>Pantalla 6.78" AMOLED 120Hz</li>
+<li>Helio G100</li>
+<li>8GB RAM</li>
+<li>Batería 5000 mAh</li>
+<li>Cámara 108 MP</li>
+</ul>
+</details>
+
+<details>
+<summary>Blue G95</summary>
+<ul>
+<li>Pantalla 6.5"</li>
+<li>Octa-core</li>
+<li>6GB RAM</li>
+<li>Batería 5000 mAh</li>
+<li>Cámara 50 MP</li>
+</ul>
+</details>
+
+<details>
+<summary>Moto G04s</summary>
+<ul>
+<li>Pantalla 6.6"</li>
+<li>Unisoc T606</li>
+<li>4GB RAM</li>
+<li>Batería 5000 mAh</li>
+<li>Cámara 50 MP</li>
+</ul>
+</details>
+
+<details>
+<summary>Samsung Galaxy A16</summary>
+<ul>
+<li>Pantalla 6.7" Super AMOLED</li>
+<li>Exynos</li>
+<li>4-6GB RAM</li>
+<li>Batería 5000 mAh</li>
+<li>Cámara 50 MP</li>
+</ul>
+</details>
+
+<details>
+<summary>Spark Go 1</summary>
+<ul>
+<li>Pantalla 6.6"</li>
+<li>4GB RAM</li>
+<li>Batería 5000 mAh</li>
+<li>Cámara 13 MP</li>
+</ul>
+</details>
+
+<details>
+<summary>Spark 30 Pro</summary>
+<ul>
+<li>Pantalla 6.78" AMOLED 120Hz</li>
+<li>Helio G100</li>
+<li>8GB RAM</li>
+<li>Batería 5000 mAh</li>
+<li>Cámara 108 MP</li>
+</ul>
+</details>
+
+</div>
+
+<div class="panel">
+<h3>Requisitos</h3>
+<p><span class="check">✔</span>INE vigente</p>
+<p><span class="check">✔</span>Comprobante de domicilio</p>
+</div>
+
+</div>
+
+</body>
+</html>
