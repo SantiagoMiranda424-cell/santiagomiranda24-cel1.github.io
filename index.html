@@ -1,66 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Payphone Morelia</title>
 
 <style>
 :root{
-  --bg:#0f172a;
-  --card:#1e293b;
-  --accent:#2563eb;
-  --accent2:#3b82f6;
-  --text:#f1f5f9;
-  --muted:#94a3b8;
-  --line:#334155;
+  --bg1:#0f1c3f;
+  --bg2:#1e3a8a;
+  --card:rgba(255,255,255,.08);
+  --line:rgba(255,255,255,.15);
+  --text:#ffffff;
+  --muted:#cbd5e1;
+  --green:#22c55e;
 }
-
-*{box-sizing:border-box}
 
 body{
   margin:0;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto;
-  background:linear-gradient(180deg,#0f172a,#1e293b);
+  font-family:system-ui;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
   color:var(--text);
 }
 
 .wrap{
   max-width:1100px;
   margin:auto;
-  padding:20px;
+  padding:40px 20px;
 }
 
 header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-bottom:30px;
+  flex-wrap:wrap;
 }
 
-h1,h2,h3{margin:0 0 10px}
-
 .btn{
-  display:inline-block;
+  background:#2563eb;
+  color:white;
   padding:10px 18px;
   border-radius:8px;
   text-decoration:none;
   font-weight:600;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  color:white;
+  display:inline-block;
+  transition:.2s;
 }
+.btn:hover{opacity:.8}
 
 .btn.secondary{
   background:transparent;
-  border:1px solid var(--muted);
+  border:1px solid white;
+}
+
+.hero{
+  margin-top:40px;
 }
 
 .panel{
   background:var(--card);
-  padding:20px;
-  border-radius:14px;
-  margin-top:30px;
   border:1px solid var(--line);
+  border-radius:16px;
+  padding:25px;
+  margin-top:30px;
 }
 
 .ctaRow{
@@ -70,18 +72,21 @@ h1,h2,h3{margin:0 0 10px}
   flex-wrap:wrap;
 }
 
-.tag{
-  color:var(--muted);
-  font-size:14px;
-  margin-bottom:10px;
-}
+ul{padding-left:20px}
+
+.check li::marker{color:var(--green)}
 
 details{
-  background:#0f172a;
+  background:rgba(255,255,255,.05);
   border:1px solid var(--line);
-  border-radius:10px;
-  padding:12px;
+  border-radius:12px;
+  padding:14px;
   margin:10px 0;
+  transition:.2s;
+}
+
+details:hover{
+  background:rgba(255,255,255,.1);
 }
 
 summary{
@@ -89,18 +94,10 @@ summary{
   font-weight:700;
 }
 
-ul{
-  margin:10px 0 0;
-  padding-left:18px;
-  color:var(--muted);
-}
-
 footer{
-  margin-top:40px;
-  padding-top:20px;
-  border-top:1px solid var(--line);
-  text-align:center;
-  color:var(--muted);
+  margin-top:50px;
+  opacity:.7;
+  font-size:14px;
 }
 </style>
 </head>
@@ -113,34 +110,31 @@ footer{
     <h2>Payphone • Morelia</h2>
     <div style="color:var(--muted)">Financia tu celular con pagos semanales</div>
   </div>
-
-  <a class="btn"
-     href="https://www.facebook.com/share/1isYCJbbrC/?mibextid=wwXIfr"
-     target="_blank" rel="noopener">
-     Ir a Facebook
-  </a>
+  <a class="btn" href="https://www.facebook.com/share/1isYCJbbrC/?mibextid=wwXIfr" target="_blank">Ir a Facebook</a>
 </header>
 
-<section>
-  <div class="tag">📍 Centro Histórico • Plaza Real Local A2</div>
-
+<section class="hero">
+  <div style="color:#ff4d4d;margin-bottom:6px">📍 Centro Histórico • Plaza Real Local A2</div>
   <h1>Payphone llega a Morelia</h1>
-  <p>
-    Financiamiento de celulares con <strong>pagos semanales</strong>.
+  <p style="color:var(--muted)">
+    Financiamiento de celulares con pagos semanales.
     Proceso rápido, atención directa y entrega inmediata.
   </p>
 
   <div class="ctaRow">
-    <a class="btn"
-       href="https://www.facebook.com/share/1isYCJbbrC/?mibextid=wwXIfr"
-       target="_blank" rel="noopener">
-       Ir a Facebook y cotizar
-    </a>
-
-    <a class="btn secondary" href="#modelos">
-       Ver modelos
-    </a>
+    <a class="btn" href="https://www.facebook.com/share/1isYCJbbrC/?mibextid=wwXIfr" target="_blank">Ir a Facebook y cotizar</a>
+    <a class="btn secondary" href="#modelos">Ver modelos</a>
   </div>
+</section>
+
+<section class="panel">
+  <h3>Lo que te damos</h3>
+  <ul class="check">
+    <li>✅ Aprobación en minutos</li>
+    <li>✅ Pagos semanales</li>
+    <li>✅ Atención por Facebook</li>
+    <li>✅ Entrega inmediata</li>
+  </ul>
 </section>
 
 <section id="modelos" class="panel">
@@ -159,68 +153,13 @@ footer{
   </details>
 
   <details>
-    <summary>Infinix Hot 60i</summary>
-    <ul>
-      <li>Pantalla 6.67" HD+</li>
-      <li>Helio G81</li>
-      <li>4-8GB RAM</li>
-      <li>Batería 5160 mAh</li>
-      <li>Cámara 50 MP</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>Infinix Hot 50 Pro</summary>
-    <ul>
-      <li>Pantalla 6.78" AMOLED</li>
-      <li>Helio G100</li>
-      <li>8GB RAM</li>
-      <li>Batería 5000 mAh</li>
-      <li>Cámara 50 MP</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>Blue G95</summary>
-    <ul>
-      <li>Pantalla 6.7" AMOLED</li>
-      <li>Helio G100</li>
-      <li>8GB RAM / 256GB</li>
-      <li>Batería 5000 mAh</li>
-      <li>Cámara 50 MP</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>Moto G04s</summary>
-    <ul>
-      <li>Pantalla 6.6"</li>
-      <li>Unisoc T606</li>
-      <li>4GB RAM</li>
-      <li>Batería 5000 mAh</li>
-      <li>Cámara 50 MP</li>
-    </ul>
-  </details>
-
-  <details>
     <summary>Samsung Galaxy A16</summary>
     <ul>
       <li>Pantalla 6.7" Super AMOLED</li>
       <li>Helio G99</li>
-      <li>4-6GB RAM / 128GB</li>
+      <li>4-6GB RAM</li>
       <li>Batería 5000 mAh</li>
       <li>Cámara 50 MP</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>Spark Go 1</summary>
-    <ul>
-      <li>Pantalla 6.67"</li>
-      <li>Unisoc T615</li>
-      <li>3-4GB RAM</li>
-      <li>Batería 5000 mAh</li>
-      <li>Cámara 13 MP</li>
     </ul>
   </details>
 
@@ -238,22 +177,18 @@ footer{
 
 <section class="panel">
   <h3>Requisitos</h3>
-  <ul>
-    <li>INE vigente</li>
-    <li>Comprobante de domicilio</li>
+  <ul class="check">
+    <li>✅ INE vigente</li>
+    <li>✅ Comprobante de domicilio</li>
   </ul>
 
   <div class="ctaRow">
-    <a class="btn"
-       href="https://www.facebook.com/share/1isYCJbbrC/?mibextid=wwXIfr"
-       target="_blank" rel="noopener">
-       Iniciar por Facebook
-    </a>
+    <a class="btn" href="https://www.facebook.com/share/1isYCJbbrC/?mibextid=wwXIfr" target="_blank">Iniciar por Facebook</a>
   </div>
 </section>
 
 <footer>
-© Payphone Morelia • Atención vía Facebook
+  © Payphone Morelia • Información sujeta a disponibilidad.
 </footer>
 
 </div>
